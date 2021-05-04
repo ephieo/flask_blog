@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <!-- <h1>HOME</h1> -->
+    <!-- writing a for loop  -->
+    {%for post in posts%}
+    <div class="card text-white bg-dark mb-3  m-4 border border-success" style="max-width: 18rem;" >
+        <div class="card-body  m-4 border border-success">
+            <div class="card-header">{{post.title}}</div>
+          <p>By {{post.author}} on {{post.date_posted}}</p>
+          <p>{{post.content}}</p>
+        </div>
+    </div>
+    <!-- then you need to tell the for loop when to end  -->
+    {%endfor%}
+{% endblock content %}
